@@ -18,7 +18,7 @@ namespace ConsoleApp1
     {
         public static int[] SortArray(int[] array)
         {
-            List<int> index = new List<int>();
+            List<int> list_index = new List<int>();
             List<int> list_odd = new List<int>();
             for (int i = 0; i < array.Length; i++)
             {
