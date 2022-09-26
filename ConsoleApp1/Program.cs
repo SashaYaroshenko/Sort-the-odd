@@ -25,31 +25,17 @@ namespace ConsoleApp1
                 if(array[i]%2 != 0)
                 {
                     list_odd.Add(array[i]);
-                    array[i] = -999;
+                    list_index.Add(i);
                 }  
             }
             list_odd.Sort();
-            for(int i = 0; i < array.Length; i++)
+            for (int i = 0; i < list_index.Count; i++)
             {
-                for (int l = 0; l < list_odd.Count; l++)
-                {
-                    if (array[i] == -999)
-                    {
-                        array[i] = list_odd[l];
-                        i++;
-                    }
-                    else if (array[i] == array[array.Length-1])
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        i++;
-                        l--;
-                    }
-                }
+                int index = list_index[i];
+                array[index] = list_odd[i];
             }
             return array;
         }
     }
 }
+
